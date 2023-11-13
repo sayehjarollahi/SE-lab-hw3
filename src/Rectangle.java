@@ -1,4 +1,4 @@
-public class Rectangle {
+public class Rectangle extends Shape {
     private int width;
     private int height;
 
@@ -7,6 +7,7 @@ public class Rectangle {
         this.height = height;
     }
 
+    @Override
     public int computeArea() {
         return this.width * this.height;
     }
