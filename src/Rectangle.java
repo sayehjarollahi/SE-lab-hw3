@@ -8,7 +8,22 @@ public class Rectangle {
     }
 
     public int computeArea() {
-        return this.height * this.width;
+        return this.width * this.height;
     }
 
+    public int getWidth() {
+        return width;
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
+    public void setWidth(int width) {
+        this.width = width;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
+    }
 }
