@@ -123,3 +123,36 @@ public class Rectangle {
 ```
 
 حال مشاهده میشود تست ها به درستی اجرا می شوند.
+
+#عکس
+
+###مرحله سوم
+
+در این مرحله بر اساس SOLID باید یک اینترفیس Shape اضافه کنیم که Rectangle و Square از آن به ارث ببرند.
+
+ابتدا تست ها را اضافه میکنیم:
+
+```java
+public class SquareTest {
+
+    @Test
+    public void testComputeArea() {
+        Square square = new Square(4);
+        double actualArea = square.computeArea();
+        assertEquals(16, actualArea, 0);
+    }
+
+    @Test
+    public void testSquareSetEdge(){
+        Square square = new Square(4);
+        square.setEdge(5);
+        assertEquals(25, square.computeArea());
+    }
+
+    @Test
+    public void testSquareGetEdge(){
+        Square square = new Square(4);
+        assertEquals(4, square.getEdge());
+    }
+}
+```
