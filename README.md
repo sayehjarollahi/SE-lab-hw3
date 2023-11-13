@@ -156,3 +156,50 @@ public class SquareTest {
     }
 }
 ```
+همانطور که می‌بینید تست‌ها پاس نمی‌شوند و دوباره کامپایل ارور می‌خوریم چون Square نداریم.
+
+#عکس
+
+حال برای ادامه طبق توضیحات بالا Shape را درست میکنیم.
+
+```java
+public abstract class Shape {
+    public abstract int computeArea();
+}
+```
+
+سپس کلاس Square را اضافه میکنیم:
+
+```java
+public class Square extends Shape {
+    private int edge;
+
+    public Square(int edge) {
+        this.edge = edge;
+    }
+
+    @Override
+    public int computeArea() {
+        return this.edge * this.edge;
+    }
+
+    public int getEdge() {
+        return edge;
+    }
+
+    public void setEdge(int edge) {
+        this.edge = edge;
+    }
+}
+```
+
+حال تغییرات مربوطه در کلاس Rectangle را میدهیم:
+```java
+public class Rectangle extends Shape {
+    
+}
+```
+
+حال میتوان دید تمام تست ها به درستی اجرا می شوند.
+
+#عکس
